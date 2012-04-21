@@ -19,6 +19,101 @@
     </header>
 
     <div role="main">
+      <form action="#/recalculate" method="get" class='form-horizontal'>
+        <fieldset>
+          <legend>About You</legend>
+
+          <div class='control-group'>
+            <label class='control-label' for='maritalStatus'>Marital Status:</label>
+            <div class='controls'>
+              <select id="maritalStatus">
+                <option value="single" selected>Single</option>
+                <option value="joint">Married, Filing Jointly</option>
+                <option value="separate">Married, Filing Separately</option>
+                <option value="headOfHousehold">Head of Household</option>
+              </select>
+            </div>
+          </div>
+
+          <div class='control-group'>
+            <label class='control-label' for='dependents'>Dependents:</label>
+            <div class='controls'>
+              <input id='dependents' type="number" value="0" min="0" step="1" required />
+            </div>
+          </div>
+
+          <div class='control-group'>
+            <label class='control-label' for='income'>Income:</label>
+            <div class='controls'>
+              <div class='input-prepend input-append'>
+                <span class='add-on'>$
+                </span><input id="income" type="number" value="100000"
+                /><span class='add-on'>.00</span>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>About Your Options</legend>
+
+          <div class='control-group'>
+            <label class='control-label' for='optionCount'>Number of Options:</label>
+            <div class='controls'>
+              <input id="optionCount" type="number" value="10000" min="0" required />
+            </div>
+          </div>
+
+          <div class='control-group'>
+            <label class='control-label' for='strikePrice'>Strike Price:</label>
+            <div class='controls'>
+              <div class='input-prepend'>
+                <span class='add-on'>$
+                </span><input id="strikePrice" type="number" value="1.00" min="0" required />
+              </div>
+            </div>
+          </div>
+
+          <div class='control-group'>
+            <label class='control-label' for='currentValue'>Current Value:</label>
+            <div class='controls'>
+              <div class='input-prepend'>
+                <span class='add-on'>$
+                </span><input id="currentValue" type="number" value="5.00" min="0" required />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class='control-group'>
+            <label class='control-label' for='taxBeforeOptions'>Tax Before Options:</label>
+            <div class='controls'>
+              $<output id="taxBeforeOptions" />
+            </div>
+          </div>
+
+          <div class='control-group'>
+            <label class='control-label' for='purchaseCost'>Purchase Cost:</label>
+            <div class='controls'>
+              $<output id="purchaseCost" />
+            </div>
+          </div>
+
+          <div class='control-group'>
+            <label class='control-label' for='totalTax'>Total Taxes with Options:</label>
+            <div class='controls'>
+              $<output id="totalTax" />
+            </div>
+          </div>
+
+          <div class='control-group'>
+            <label class='control-label' for='costOfOptions'>Total Cost of Options:</label>
+            <div class='controls'>
+              $<output id="costOfOptions" />
+            </div>
+          </div>
+      </form>
     </div>
 
     <footer>
