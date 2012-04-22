@@ -12,14 +12,28 @@
     <meta name="author" content="James A. Rosen">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/screen.css">
     <script src="vendor/modernizr-2.5.3.min.js"></script>
   </head>
   <body>
-    <header>
+    <header class='navbar navbar-fixed-top'>
+      <div class='navbar-inner'>
+        <div class='container'>
+          <a href='#intro' class='brand'>How Many Options Can I Afford?</a>
+          <ul class='nav'>
+            <li class='active'><a href='#intro'>Home</a></li>
+            <li><a href='#calculate'>Calculate</a></li>
+        </div>
+      </div>
     </header>
 
-    <div role="main">
-      <form action="#/recalculate" method="get" class='form-horizontal'>
+    <div role="main" class='container tabbable'>
+      <div id='intro' class='tab-content'>
+        Hello
+      </div>
+
+      <form action="#/recalculate" method="get"
+            class='tab-content form-horizontal' id='calculate'>
         <fieldset>
           <legend>About You</legend>
 
