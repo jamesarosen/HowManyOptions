@@ -2,6 +2,7 @@ body { padding-top: 80px; }
 .tab-content { display: none; }
 #intro { display: block; }
 cite:before { content: "—"; }
+.call-to-action { margin: 3em 0 2em 0; text-align: center; }
 
 footer.page {
   border-top: 1px solid #E5E5E5;
